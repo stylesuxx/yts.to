@@ -87,7 +87,7 @@ test('get upcoming', function (t) {
 });
 
 test('get user details', function (t) {
-  t.plan(2);
+  t.plan(3);
 
   var yts = new YTS();
   yts.getUserDetails(23, {with_recently_downloaded: true}).then( function(user) {
