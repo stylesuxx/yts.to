@@ -79,12 +79,24 @@ class YTS {
   }
 
   editUserSettings(userKey, applicationKey, options = {}) {
-    var url = 'user_edit_settings';
+    var url = 'user_edit_settings.json';
     var body = {
       user_key: userKey,
       application_key: applicationKey
     };
     body = merge(body, options);
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  registerUser(applicationKey, username, password, email) {
+    var url = 'user_register.json';
+    var body = {
+      application_key: applicationKey,
+      username: username,
+      password: password,
+      email: email
+    };
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
