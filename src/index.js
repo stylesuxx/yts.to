@@ -51,8 +51,9 @@ class YTS {
     return rp({url: this.apiUrl + url, json:true});
   }
 
-  getUserDetails(userId) {
-    var url ='list_upcoming.json';
+  getUserDetails(userId, options = {}) {
+    var query = this.buildQuery(options);
+    var url ='user_details.json?user_id=' + userId + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
 }
