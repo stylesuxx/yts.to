@@ -168,7 +168,7 @@ test('getBookmarks', function (t) {
   t.plan(1);
 
   var yts = new YTS();
-  yts.getBookmarks('user_key', {with_rt_ratings: true}).then( function(settings) {
-    t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  yts.getBookmarks('user_key', {with_rt_ratings: true}).then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'User does not exist', 'Endpoint seems OK');
   });
 });
