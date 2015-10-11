@@ -63,11 +63,12 @@ test('get movie reviews', function (t) {
   });
 });
 
-test('get parental guide for movie', function (t) {
-  t.plan(1);
+test('get parental guides for movie', function (t) {
+  t.plan(2);
 
   var yts = new YTS();
-  yts.getParentalGuide(10).then( function(guide) {
-    t.equal(guide.status, 'ok', 'Request success');
+  yts.getParentalGuides(10).then( function(guides) {
+    t.equal(guides.status, 'ok', 'Request success');
+    t.ok(guides.data.parental_guide_count, 'Has guides count');
   });
 });
