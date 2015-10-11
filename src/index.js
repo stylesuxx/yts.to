@@ -40,6 +40,11 @@ class YTS {
     var url ='movie_reviews.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
+
+  getParentalGuides(movieId) {
+    var url ='movie_parental_guides.json?movie_id=' + movieId;
+    return rp({url: this.apiUrl + url, json:true});
+  }
 }
 
 export default YTS;
