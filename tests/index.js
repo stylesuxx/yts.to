@@ -190,3 +190,39 @@ test('delete bookmark', function (t) {
     t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('make comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.makeComment('user_key', 'movie_id', 'comment_text', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
+
+test('like comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.likeComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
+
+test('report comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.reportComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
+
+test('delete comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.deleteComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});

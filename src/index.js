@@ -164,6 +164,51 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  makeComment(userKey, movieId, commentText, applicationKey) {
+    var url = 'make_comment.json';
+    var body = {
+      user_key: userKey,
+      movie_id: movieId,
+      comment_text: commentText,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  likeComment(userKey, commentId, applicationKey) {
+    var url = 'like_comment.json';
+    var body = {
+      user_key: userKey,
+      comment_id: commentId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  reportComment(userKey, commentId, applicationKey) {
+    var url = 'report_comment.json';
+    var body = {
+      user_key: userKey,
+      comment_id: commentId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  deleteComment(userKey, commentId, applicationKey) {
+    var url = 'delete_comment.json';
+    var body = {
+      user_key: userKey,
+      comment_id: commentId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
