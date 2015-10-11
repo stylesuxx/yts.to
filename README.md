@@ -32,6 +32,7 @@ The *YTS* class provides the following methods:
 * likeComment(userKey, commentId, applicationKey)
 * reportComment(userKey, commentId, applicationKey)
 * deleteComment(userKey, commentId, applicationKey)
+* makeRequest(userKey, movieTitle, applicationKey, options = {})
 
 ## Examples
 

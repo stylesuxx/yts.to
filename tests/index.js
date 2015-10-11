@@ -226,3 +226,12 @@ test('delete comment', function (t) {
     t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('make request', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.makeRequest('user_key', 'movie_title', 'application_key', {request_message: 'foobar'}).then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
