@@ -76,11 +76,12 @@ test('get parental guides for movie', function (t) {
 
 
 test('get upcoming', function (t) {
-  t.plan(2);
+  t.plan(3);
 
   var yts = new YTS();
   yts.getUpcoming().then( function(upcoming) {
     t.equal(upcoming.status, 'ok', 'Request success');
     t.ok(upcoming.data.upcoming_movies_count, 'Has upcoming count');
+    t.ok(upcoming.data.upcoming_movies, 'Has upcoming movies');
   });
 });
