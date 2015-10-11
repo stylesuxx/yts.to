@@ -1,0 +1,33 @@
+{
+  "name": "yts.to",
+  "version": "0.1.0",
+  "description": "Wrapper for yts.to API that returns promises",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npm run clean && ./node_modules/.bin/babel src --out-dir lib",
+    "test": "npm run build && node ./tests/index.js",
+    "lint": "./node_modules/.bin/eslint src",
+    "prepublish": "npm run build",
+    "preversion": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stylesuxx/yts.to"
+  },
+  "keywords": [
+    "yts",
+    "yts.to"
+  ],
+  "author": "Chris Landa <stylesuxx@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "merge": "^1.2.0",
+    "request-promise": "^0.4.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "eslint": "^1.6.0",
+    "tape": "^4.2.1"
+  }
+}
