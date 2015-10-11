@@ -96,3 +96,12 @@ test('get user details', function (t) {
     t.ok(user.data.recently_downloaded, 'Has recently downloaded');
   });
 });
+
+test('get user key', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getUserKey('username', 'password', 'application_key').then( function(key) {
+    t.equal(key.status, 'ok', 'Request success');
+  });
+});
