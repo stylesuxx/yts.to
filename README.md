@@ -9,11 +9,12 @@ The parameters for the methods are the mandatory fields. Where optional fields m
 
 ## Usage example
 ``` JavaScript
-var yts = require('yts.to');
+var YTS = require('yts.to');
+var yts = new YTS();
 
 yts.findMovie('Snatch', {with_rt_ratings: true}).then( function(movies) {
   console.log(movies);
-})
+});
 ```
 
 ## Available methods
