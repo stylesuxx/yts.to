@@ -22,11 +22,11 @@
   "author": "Chris Landa <stylesuxx@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "babel": "^5.8.23",
     "merge": "^1.2.0",
     "request-promise": "^0.4.3"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
     "eslint": "^1.6.0",
     "tape": "^4.2.1"
   }
