@@ -20,6 +20,7 @@ The *YTS* class provides the following methods:
 ### Require application and/or user key
 * getUserKey(username, password, applicationId)
 * getUserProfile(userKey)
+* editUserSettings(userKey, applicationKey, options = {})
 
 ## Examples
 

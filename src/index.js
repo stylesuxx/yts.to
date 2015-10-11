@@ -1,4 +1,5 @@
 import rp from 'request-promise';
+import merge from 'merge';
 
 class YTS {
   constructor(url = 'https://yts.to/api/v2/') {
@@ -57,12 +58,12 @@ class YTS {
     return rp({url: this.apiUrl + url, json:true});
   }
 
-  getUserKey(username, password, applicationId) {
+  getUserKey(username, password, applicationKey) {
     var url = 'user_get_key.json';
     var body = {
       username: username,
       password: password,
-      application_key: applicationId
+      application_key: applicationKey
     };
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
@@ -73,6 +74,17 @@ class YTS {
     var body = {
       user_key: userKey
     };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  editUserSettings(userKey, applicationKey, options = {}) {
+    var url = 'user_edit_settings';
+    var body = {
+      user_key: userKey,
+      application_key: applicationKey
+    };
+    body = merge(body, options);
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
