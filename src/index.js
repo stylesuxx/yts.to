@@ -164,6 +164,18 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  makeComment(userKey, movieId, commentText, applicationKey) {
+    var url = 'make_comment.json';
+    var body = {
+      user_key: userKey,
+      movie_id: movieId,
+      comment_text: commentText,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
