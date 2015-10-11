@@ -11,6 +11,10 @@
     "prepublish": "npm run build",
     "preversion": "npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stylesuxx/yts.to"
+  },
   "keywords": [
     "yts",
     "yts.to"
