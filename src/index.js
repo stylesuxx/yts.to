@@ -142,6 +142,28 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  addBookmark(userKey, movieId, applicationKey) {
+    var url = 'add_movie_bookmark.json';
+    var body = {
+      user_key: userKey,
+      movie_id: movieId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  deleteBookmark(userKey, movieId, applicationKey) {
+    var url = 'delete_movie_bookmark.json';
+    var body = {
+      user_key: userKey,
+      movie_id: movieId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
