@@ -8,7 +8,8 @@
     "build": "npm run clean && ./node_modules/.bin/babel src --out-dir lib",
     "test": "npm run build && node ./tests/index.js",
     "lint": "./node_modules/.bin/eslint src",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "preversion": "npm test"
   },
   "keywords": [
     "yts",
