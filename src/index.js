@@ -25,6 +25,11 @@ class YTS {
     var url ='movie_details.json?movie_id=' + movieId + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
+
+  getSuggestions(movieId) {
+    var url ='movie_suggestions.json?movie_id=' + movieId;
+    return rp({url: this.apiUrl + url, json:true});
+  }
 }
 
 export default YTS;
