@@ -117,3 +117,12 @@ test('get user profile', function (t) {
     t.equal(profile.status_message, 'User does not exist', 'Endpoint seems OK');
   });
 });
+
+test('edit user settings', function (t) {
+  t.plan(0);
+
+  var yts = new YTS();
+  yts.editUserSettings('user_key', 'application_key').then( function(settings) {
+    console.log(settings);
+  });
+});
