@@ -93,5 +93,6 @@ test('get user details', function (t) {
   yts.getUserDetails(23, {with_recently_downloaded: true}).then( function(user) {
     t.equal(user.status, 'ok', 'Request success');
     t.equal(user.data.username, 'Souseiseki', 'Username matches');
+    t.ok(user.data.recently_downloaded, 'Has recently downloaded');
   });
 });
