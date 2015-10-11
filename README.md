@@ -24,6 +24,7 @@ The *YTS* class provides the following methods:
 * registerUser(applicationKey, username, password, email)
 * forgotPassword(applicationKey, email)
 * resetPassword(resetCode, newPassword, applicationKey)
+* likeMovie(userKey, movieId, applicationKey)
 
 ## Examples
 
