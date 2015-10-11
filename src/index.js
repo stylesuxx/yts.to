@@ -132,6 +132,16 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  getBookmarks(userKey, options = {}) {
+    var url = 'get_movie_bookmarks';
+    var body = {
+      user_key: userKey
+    };
+    body = merge(body, options);
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
