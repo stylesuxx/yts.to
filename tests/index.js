@@ -85,3 +85,14 @@ test('get upcoming', function (t) {
     t.ok(upcoming.data.upcoming_movies, 'Has upcoming movies');
   });
 });
+
+test('get user details', function (t) {
+  t.plan(3);
+
+  var yts = new YTS();
+  yts.getUserDetails(23, {with_recently_downloaded: true}).then( function(user) {
+    t.equal(user.status, 'ok', 'Request success');
+    t.equal(user.data.username, 'Souseiseki', 'Username matches');
+    t.ok(user.data.recently_downloaded, 'Has recently downloaded');
+  });
+});
