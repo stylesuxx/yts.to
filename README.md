@@ -1,5 +1,7 @@
 # yts.to API wrapper
-This is a wrapper for the [yts.to API](https://yts.to/api).
+[![Build pass](https://travis-ci.org/stylesuxx/yts.to.svg?branch=master)](https://travis-ci.org/stylesuxx/yts.to?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/yts.to.svg)](https://david-dm.org/stylesuxx/yts.to)
+
+This is a *JavaScript* wrapper for the [yts.to API](https://yts.to/api) that returns promises.
 
 Calls to the classes methods return promises. All [API](https://yts.to/api) functionality is wrapped.
 The parameters for the methods are the mandatory fields. Where optional fields may be passed this may be done via options object. For optional parameters please refer to the [yts.to API documentation](https://yts.to/api). JSON is returned directly as the API returns it. The interesting content is in the *data* field of the response.
