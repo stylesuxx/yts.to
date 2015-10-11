@@ -23,7 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "merge": "^1.2.0",
-    "request-promise": "^0.4.3"
+    "request-promise": "^1.0.0"
   },
   "devDependencies": {
     "babel": "^5.8.23",
