@@ -134,7 +134,7 @@ class YTS {
   }
 
   getBookmarks(userKey, options = {}) {
-    var url = 'get_movie_bookmarks';
+    var url = 'get_movie_bookmarks.json';
     var body = {
       user_key: userKey
     };
@@ -206,6 +206,18 @@ class YTS {
       comment_id: commentId,
       application_key: applicationKey
     };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
+
+  makeRequest(userKey, movieTitle, applicationKey, options = {}) {
+    var url = 'make_request.json';
+    var body = {
+      user_key: userKey,
+      movie_title: movieTitle,
+      application_key: applicationKey
+    };
+    body = merge(body, options);
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
