@@ -18,7 +18,7 @@ test('search for movies', function (t) {
 });
 
 test('get details for movie', function (t) {
-  t.plan(5);
+  t.plan(6);
 
   var yts = new YTS();
   yts.getDetails(10, {with_cast: true}).then( function(movie) {
@@ -27,5 +27,6 @@ test('get details for movie', function (t) {
     t.ok(movie.data.torrents.length, 'Has at least one torrent');
     t.ok(movie.data.description_intro, 'Has description');
     t.ok(movie.data.rating, 'Has rating');
+    t.ok(movie.data.actors, 'Has actors');
   });
 });
