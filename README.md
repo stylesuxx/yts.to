@@ -8,13 +8,13 @@ The parameters for the methods are the mandatory fields. Where optional fields m
     npm install yts.to --save
 
 ## Usage example
-''' JavaScript
+``` JavaScript
 var yts = require('yts.to');
 
 yts.findMovie('Snatch', {with_rt_ratings: true}).then( function(movies) {
   console.log(movies);
 })
-'''
+```
 
 ## Available methods
 The *YTS* class provides the following methods:
