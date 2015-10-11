@@ -198,6 +198,17 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  deleteComment(userKey, commentId, applicationKey) {
+    var url = 'delete_comment.json';
+    var body = {
+      user_key: userKey,
+      comment_id: commentId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
