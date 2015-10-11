@@ -217,3 +217,12 @@ test('report comment', function (t) {
     t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('delete comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.deleteComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
