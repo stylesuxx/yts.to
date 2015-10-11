@@ -32,11 +32,12 @@ test('get details for movie', function (t) {
 });
 
 
-test('get details for movie', function (t) {
-  t.plan(1);
+test('get suggestions for movie', function (t) {
+  t.plan(2);
 
   var yts = new YTS();
   yts.getSuggestions(10).then( function(movies) {
     t.equal(movies.status, 'ok', 'Request success');
+    t.ok(movies.data.movie_suggestions, 'Has suggestions');
   });
 });
