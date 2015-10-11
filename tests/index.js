@@ -1,6 +1,6 @@
 var test = require('tape');
 var YTS = require('../');
-
+/*
 test('search for movies', function (t) {
   t.plan(8);
 
@@ -96,9 +96,10 @@ test('get user details', function (t) {
     t.ok(user.data.recently_downloaded, 'Has recently downloaded');
   });
 });
+*/
 
 /**
- * Widhout credentials the following tests just check for status messages
+ * Without credentials the following tests just check for status messages
  */
 test('get user key', function (t) {
   t.plan(1);
@@ -119,10 +120,10 @@ test('get user profile', function (t) {
 });
 
 test('edit user settings', function (t) {
-  t.plan(0);
+  t.plan(1);
 
   var yts = new YTS();
   yts.editUserSettings('user_key', 'application_key').then( function(settings) {
-    console.log(settings);
+    t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
