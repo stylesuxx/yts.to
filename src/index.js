@@ -6,10 +6,10 @@ class YTS {
 
     this.buildQuery = function(options) {
       var queryString = '';
-
       for(var index in options) {
         queryString += index + '=' + options[index] + '&'
       }
+
       return queryString
     }
   }
