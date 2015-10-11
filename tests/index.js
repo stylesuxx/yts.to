@@ -87,10 +87,11 @@ test('get upcoming', function (t) {
 });
 
 test('get user details', function (t) {
-  t.plan(1);
+  t.plan(2);
 
   var yts = new YTS();
-  yts.getUserDetails().then( function(user) {
+  yts.getUserDetails(23, {with_recently_downloaded: true}).then( function(user) {
     t.equal(user.status, 'ok', 'Request success');
+    t.equal(user.data.username, 'Souseiseki', 'Username matches');
   });
 });
