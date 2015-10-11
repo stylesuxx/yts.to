@@ -31,7 +31,6 @@ test('get details for movie', function (t) {
   });
 });
 
-
 test('get suggestions for movie', function (t) {
   t.plan(2);
 
@@ -39,5 +38,14 @@ test('get suggestions for movie', function (t) {
   yts.getSuggestions(10).then( function(movies) {
     t.equal(movies.status, 'ok', 'Request success');
     t.ok(movies.data.movie_suggestions, 'Has suggestions');
+  });
+});
+
+test('get comments for movie', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getComments(10).then( function(movies) {
+    t.equal(movies.status, 'ok', 'Request success');
   });
 });
