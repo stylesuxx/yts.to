@@ -26,6 +26,8 @@ The *YTS* class provides the following methods:
 * resetPassword(resetCode, newPassword, applicationKey)
 * likeMovie(userKey, movieId, applicationKey)
 * getBookmarks(userKey, options = {})
+* addBookmark(userKey, movieId, applicationKey)
+* deleteBookmark(userKey, movieId, applicationKey)
 
 ## Examples
 
