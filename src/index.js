@@ -16,44 +16,44 @@ class YTS {
 
   findMovie(searchString, options = {}) {
     var query = this.buildQuery(options);
-    var url ='list_movies.json?query_term=' + searchString + '&' + query;
+    var url = 'list_movies.json?query_term=' + searchString + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getDetails(movieId, options = {}) {
     var query = this.buildQuery(options);
-    var url ='movie_details.json?movie_id=' + movieId + '&' + query;
+    var url = 'movie_details.json?movie_id=' + movieId + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getSuggestions(movieId) {
-    var url ='movie_suggestions.json?movie_id=' + movieId;
+    var url = 'movie_suggestions.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getComments(movieId) {
-    var url ='movie_comments.json?movie_id=' + movieId;
+    var url = 'movie_comments.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getReviews(movieId) {
-    var url ='movie_reviews.json?movie_id=' + movieId;
+    var url = 'movie_reviews.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getParentalGuides(movieId) {
-    var url ='movie_parental_guides.json?movie_id=' + movieId;
+    var url = 'movie_parental_guides.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getUpcoming() {
-    var url ='list_upcoming.json';
+    var url = 'list_upcoming.json';
     return rp({url: this.apiUrl + url, json:true});
   }
 
   getUserDetails(userId, options = {}) {
     var query = this.buildQuery(options);
-    var url ='user_details.json?user_id=' + userId + '&' + query;
+    var url = 'user_details.json?user_id=' + userId + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
 }
