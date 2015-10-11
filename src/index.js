@@ -20,8 +20,10 @@ class YTS {
     return rp({url: this.apiUrl + url, json:true});
   }
 
-  getDetails(movieId) {
-    return rp({url: this.apiUrl + 'movie_details.json?movie_id=' + movieId, json:true});
+  getDetails(movieId, options = {}) {
+    var query = this.buildQuery(options);
+    var url ='movie_details.json?movie_id=' + movieId + '&' + query;
+    return rp({url: this.apiUrl + url, json:true});
   }
 }
 
