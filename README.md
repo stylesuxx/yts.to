@@ -28,6 +28,10 @@ The *YTS* class provides the following methods:
 * getBookmarks(userKey, options = {})
 * addBookmark(userKey, movieId, applicationKey)
 * deleteBookmark(userKey, movieId, applicationKey)
+* makeComment(userKey, movieId, commentText, applicationKey)
+* likeComment(userKey, commentId, applicationKey)
+* reportComment(userKey, commentId, applicationKey)
+* deleteComment(userKey, commentId, applicationKey)
 
 ## Examples
 
