@@ -22,6 +22,7 @@ The *YTS* class provides the following methods:
 * getUserProfile(userKey)
 * editUserSettings(userKey, applicationKey, options = {})
 * registerUser(applicationKey, username, password, email)
+* forgotPassword(applicationKey, email)
 
 ## Examples
 
