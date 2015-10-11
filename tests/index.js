@@ -145,3 +145,12 @@ test('forgot password', function (t) {
     t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('reset password', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.resetPassword('reset_code','new_password', 'application_key').then( function(settings) {
+    t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});

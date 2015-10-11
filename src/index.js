@@ -110,6 +110,17 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  resetPassword(resetCode, newPassword, applicationKey) {
+    var url = 'user_reset_password.json';
+    var body = {
+      reset_code: resetCode,
+      new_password: newPassword,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
