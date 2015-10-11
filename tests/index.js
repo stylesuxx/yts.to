@@ -53,11 +53,12 @@ test('get comments for movie', function (t) {
 });
 
 test('get movie reviews', function (t) {
-  t.plan(2);
+  t.plan(3);
 
   var yts = new YTS();
   yts.getReviews(10).then( function(reviews) {
     t.equal(reviews.status, 'ok', 'Request success');
     t.ok(reviews.data.review_count, 'Has review count');
+    t.ok(reviews.data.reviews, 'Has reviews');
   });
 });
