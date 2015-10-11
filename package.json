@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npm run clean && ./node_modules/.bin/babel src --out-dir lib",
-    "test": "npm run build && node ./tests/index.js"
+    "test": "npm run build && node ./tests/index.js",
+    "lint": "./node_modules/.bin/eslint src"
   },
   "keywords": [
     "yts",
@@ -20,6 +21,7 @@
     "test": "^0.6.0"
   },
   "devDependencies": {
+    "eslint": "^1.6.0",
     "tape": "^4.2.1"
   }
 }
