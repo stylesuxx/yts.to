@@ -45,6 +45,11 @@ class YTS {
     var url ='movie_parental_guides.json?movie_id=' + movieId;
     return rp({url: this.apiUrl + url, json:true});
   }
+
+  getUpcoming() {
+    var url ='list_upcoming.json';
+    return rp({url: this.apiUrl + url, json:true});
+  }
 }
 
 export default YTS;
