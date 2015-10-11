@@ -136,3 +136,12 @@ test('register user', function (t) {
     t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('forgot password', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.forgotPassword('application_key', 'email').then( function(settings) {
+    t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
