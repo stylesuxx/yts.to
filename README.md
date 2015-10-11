@@ -1,5 +1,5 @@
 # yts.to API wrapper
-[![Build pass](https://travis-ci.org/stylesuxx/yts.to.svg?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/yts.to.svg)
+[![Build pass](https://travis-ci.org/stylesuxx/yts.to.svg?branch=master)](https://travis-ci.org/stylesuxx/yts.to?branch=master)  [![Dependencies](https://david-dm.org/stylesuxx/yts.to.svg)](https://david-dm.org/stylesuxx/yts.to)
 This is a wrapper for the [yts.to API](https://yts.to/api).
 
 Calls to the classes methods return promises. All [API](https://yts.to/api) functionality is wrapped.
