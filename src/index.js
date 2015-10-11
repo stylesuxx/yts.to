@@ -187,6 +187,17 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  reportComment(userKey, commentId, applicationKey) {
+    var url = 'report_comment.json';
+    var body = {
+      user_key: userKey,
+      comment_id: commentId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
