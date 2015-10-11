@@ -200,12 +200,20 @@ test('make comment', function (t) {
   });
 });
 
-
 test('like comment', function (t) {
   t.plan(1);
 
   var yts = new YTS();
   yts.likeComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
+
+test('report comment', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.reportComment('user_key', 'comment_id', 'application_key').then( function(bookmarks) {
     t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
