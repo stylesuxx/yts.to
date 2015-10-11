@@ -18,6 +18,7 @@ The *YTS* class provides the following methods:
 * getUserDetails(userId, options = {})
 
 ### Require application and/or user key
+* getUserKey(username, password, applicationId)
 
 ## Examples
 
