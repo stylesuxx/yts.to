@@ -21,7 +21,7 @@ test('get details for movie', function (t) {
   t.plan(5);
 
   var yts = new YTS();
-  yts.getDetails(10).then( function(movie) {
+  yts.getDetails(10, {with_cast: true}).then( function(movie) {
     t.equal(movie.status, 'ok', 'Request success');
     t.equal(movie.data.title, 'Snatch.', 'Title matches');
     t.ok(movie.data.torrents.length, 'Has at least one torrent');
