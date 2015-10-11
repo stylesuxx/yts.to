@@ -73,3 +73,13 @@ test('get parental guides for movie', function (t) {
     t.ok(guides.data.parental_guides, 'Has guides');
   });
 });
+
+
+test('get upcoming', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getUpcoming().then( function(upcoming) {
+    t.equal(upcoming.status, 'ok', 'Request success');
+  });
+});
