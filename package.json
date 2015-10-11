@@ -1,7 +1,7 @@
 {
   "name": "yts.to",
   "version": "0.1.0",
-  "description": "Wrapper for the yts.to API",
+  "description": "Wrapper for yts.to API that returns promises",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
