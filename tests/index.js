@@ -1,6 +1,6 @@
 var test = require('tape');
 var YTS = require('../');
-/*
+
 test('search for movies', function (t) {
   t.plan(8);
 
@@ -96,7 +96,6 @@ test('get user details', function (t) {
     t.ok(user.data.recently_downloaded, 'Has recently downloaded');
   });
 });
-*/
 
 /**
  * Without credentials the following tests just check for status messages

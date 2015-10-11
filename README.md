@@ -2,9 +2,21 @@
 This is a wrapper for the [yts.to API](https://yts.to/api).
 
 Calls to the classes methods return promises. All [API](https://yts.to/api) functionality is wrapped.
-The parameters for the methods are the mandatory fields. Where optional fields may be passed this may be done via options object. For optional parameters please refere to the [yts.to API documentation](https://yts.to/api). JSON is returned directly as the API returns it. The interesting content is in the *data* field of the response.
+The parameters for the methods are the mandatory fields. Where optional fields may be passed this may be done via options object. For optional parameters please refer to the [yts.to API documentation](https://yts.to/api). JSON is returned directly as the API returns it. The interesting content is in the *data* field of the response.
 
-## Methods
+## Installation
+    npm install yts.to --save
+
+## Usage example
+``` JavaScript
+var yts = require('yts.to');
+
+yts.findMovie('Snatch', {with_rt_ratings: true}).then( function(movies) {
+  console.log(movies);
+})
+```
+
+## Available methods
 The *YTS* class provides the following methods:
 
 ### public accessible endpoints
@@ -33,8 +45,6 @@ The *YTS* class provides the following methods:
 * reportComment(userKey, commentId, applicationKey)
 * deleteComment(userKey, commentId, applicationKey)
 * makeRequest(userKey, movieTitle, applicationKey, options = {})
-
-## Examples
 
 ## Testing
 An extensive test suite is provided and may be invoked by running:
