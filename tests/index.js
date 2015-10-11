@@ -127,3 +127,12 @@ test('edit user settings', function (t) {
     t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('register user', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.registerUser('application_key', 'username', 'password', 'email').then( function(settings) {
+    t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
