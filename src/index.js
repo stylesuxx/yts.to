@@ -100,6 +100,16 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  forgotPassword(applicationKey, email) {
+    var url = 'user_forgot_password.json';
+    var body = {
+      application_key: applicationKey,
+      email: email
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
