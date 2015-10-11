@@ -56,6 +56,17 @@ class YTS {
     var url = 'user_details.json?user_id=' + userId + '&' + query;
     return rp({url: this.apiUrl + url, json:true});
   }
+
+  getUserKey(username, password, applicationId) {
+    var url = 'user_get_key.json';
+    var body = {
+      username: username,
+      password: password,
+      application_key: applicationId
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;

@@ -96,3 +96,15 @@ test('get user details', function (t) {
     t.ok(user.data.recently_downloaded, 'Has recently downloaded');
   });
 });
+
+/**
+ * Widhout credentials the following tests just check for status messages
+ */
+test('get user key', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getUserKey('username', 'password', 'application_key').then( function(key) {
+    t.equal(key.status_message, 'Application key is invalid', 'Endpoint seems OK');
+  });
+});
