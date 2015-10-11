@@ -121,6 +121,17 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  likeMovie(userKey, movieId, applicationKey) {
+    var url = 'like_movie.json';
+    var body = {
+      user_key: userKey,
+      movie_id: movieId,
+      application_key: applicationKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
