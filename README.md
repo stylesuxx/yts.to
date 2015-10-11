@@ -46,8 +46,6 @@ The *YTS* class provides the following methods:
 * deleteComment(userKey, commentId, applicationKey)
 * makeRequest(userKey, movieTitle, applicationKey, options = {})
 
-## Examples
-
 ## Testing
 An extensive test suite is provided and may be invoked by running:
 
