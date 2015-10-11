@@ -123,7 +123,7 @@ test('edit user settings', function (t) {
   t.plan(1);
 
   var yts = new YTS();
-  yts.editUserSettings('user_key', 'application_key').then( function(settings) {
+  yts.editUserSettings('user_key', 'application_key', {about_text: 'foobar'}).then( function(settings) {
     t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
