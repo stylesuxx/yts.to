@@ -164,11 +164,20 @@ test('like movie', function (t) {
   });
 });
 
-test('getBookmarks', function (t) {
+test('get bookmarks', function (t) {
   t.plan(1);
 
   var yts = new YTS();
   yts.getBookmarks('user_key', {with_rt_ratings: true}).then( function(bookmarks) {
     t.equal(bookmarks.status_message, 'User does not exist', 'Endpoint seems OK');
+  });
+});
+
+test('add bookmark', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.addBookmark('user_key', 'movie_id', 'application_key').then( function(bookmarks) {
+    t.equal(bookmarks.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
