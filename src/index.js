@@ -50,6 +50,11 @@ class YTS {
     var url ='list_upcoming.json';
     return rp({url: this.apiUrl + url, json:true});
   }
+
+  getUserDetails(userId) {
+    var url ='list_upcoming.json';
+    return rp({url: this.apiUrl + url, json:true});
+  }
 }
 
 export default YTS;

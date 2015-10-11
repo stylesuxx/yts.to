@@ -85,3 +85,12 @@ test('get upcoming', function (t) {
     t.ok(upcoming.data.upcoming_movies, 'Has upcoming movies');
   });
 });
+
+test('get user details', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getUserDetails().then( function(user) {
+    t.equal(user.status, 'ok', 'Request success');
+  });
+});
