@@ -62,3 +62,12 @@ test('get movie reviews', function (t) {
     t.ok(reviews.data.reviews, 'Has reviews');
   });
 });
+
+test('get parental guide for movie', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getParentalGuide(10).then( function(guide) {
+    t.equal(guide.status, 'ok', 'Request success');
+  });
+});
