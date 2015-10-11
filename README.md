@@ -7,7 +7,7 @@ The parameters for the methods are the mandatory fields. Where optional fields m
 ## Methods
 The *YTS* class provides the following methods:
 
-### public accessible methods
+### public accessible endpoints
 * findMovie(searchString, options = {})
 * getDetails(movieId, options = {})
 * getSuggestions(movieId)
@@ -23,6 +23,7 @@ The *YTS* class provides the following methods:
 * editUserSettings(userKey, applicationKey, options = {})
 * registerUser(applicationKey, username, password, email)
 * forgotPassword(applicationKey, email)
+* resetPassword(resetCode, newPassword, applicationKey)
 
 ## Examples
 
