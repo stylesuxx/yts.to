@@ -42,10 +42,11 @@ test('get suggestions for movie', function (t) {
 });
 
 test('get comments for movie', function (t) {
-  t.plan(1);
+  t.plan(2);
 
   var yts = new YTS();
-  yts.getComments(10).then( function(movies) {
-    t.equal(movies.status, 'ok', 'Request success');
+  yts.getComments(10).then( function(comments) {
+    t.equal(comments.status, 'ok', 'Request success');
+    t.ok(comments.data.comment_count, 'Has comment count');
   });
 });
