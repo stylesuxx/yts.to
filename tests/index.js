@@ -159,7 +159,7 @@ test('like movie', function (t) {
   t.plan(1);
 
   var yts = new YTS();
-  yts.like('user_key','movie_id', 'application_key').then( function(settings) {
+  yts.likeMovie('user_key','movie_id', 'application_key').then( function(settings) {
     t.equal(settings.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
