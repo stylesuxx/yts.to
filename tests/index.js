@@ -108,3 +108,12 @@ test('get user key', function (t) {
     t.equal(key.status_message, 'Application key is invalid', 'Endpoint seems OK');
   });
 });
+
+test('get user profile', function (t) {
+  t.plan(1);
+
+  var yts = new YTS();
+  yts.getUserProfile('user_key').then( function(profile) {
+    t.equal(profile.status_message, 'User does not exist', 'Endpoint seems OK');
+  });
+});

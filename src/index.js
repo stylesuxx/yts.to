@@ -67,6 +67,15 @@ class YTS {
 
     return rp.post({url: this.apiUrl + url, body: body, json: true});
   }
+
+  getUserProfile(userKey) {
+    var url = 'user_profile.json';
+    var body = {
+      user_key: userKey
+    };
+
+    return rp.post({url: this.apiUrl + url, body: body, json: true});
+  }
 }
 
 export default YTS;
